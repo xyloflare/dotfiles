@@ -1,0 +1,63 @@
+.bar {
+  background-color: $bg;
+  margin: 0;
+}
+.workspaces {
+  padding-left: 0.5em;
+}
+.workspaces button {
+  margin-right: 0.25em;
+  &:hover {
+    color: #af81fe;
+  }
+}
+
+.dock {
+  color: $fg;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.45em;
+  border-radius: 0.5em;
+  border: none;
+}
+.archbtn:hover {
+  color: $blue;
+}
+.archbtn {
+  margin-right: 0.25em;
+  padding: 0 0.75em;
+}
+.notifbtn {
+  padding: 0 0.75em;
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.rightside slider {
+  all: unset;
+  color: $salmon;
+}
+
+.metricbox {
+  //background-color: $bg-alt;
+  margin: 0px 0.25em;
+  padding: 0px 0.25em;
+  //border-radius: 3px;
+}
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #D35D6E;
+  color: #000000;
+  border-radius: 0.75em;
+}
+.metric scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 3.125em;
+  min-height: 0.25em;
+  min-width: 3.125em;
+  margin-left: 0.75em;
+  margin-right: 1.25em;
+}

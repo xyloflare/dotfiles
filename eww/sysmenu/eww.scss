@@ -1,0 +1,124 @@
+$border-radius: 0.3rem;
+
+.main-menu {
+  background-color: $bg;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $purple;
+  border-radius: $border-radius;
+  padding: 1rem;
+}
+
+.profile {
+  margin: 0 0 0 0;
+  min-width: 225px;
+  background-color: $bg-alt;
+  padding: 1rem 1rem;
+  border-radius: $border-radius;
+}
+.pfp {
+  background-image: url($profile-img);
+  border-radius: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+}
+.profile-description {
+  font-size: 1rem;
+  padding: 0rem 0rem;
+  margin: 0.75rem;
+}
+.profile-username {
+  font-size: 1.3rem;
+}
+
+//.weather-box {
+  //background-color: $bg-alt;
+  //padding: 0rem;
+  //margin: 0;
+//}
+.weather {
+  padding: 0.25rem;
+  background-color: $bg-alt;
+  border-radius: $border-radius;
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+.weather-icon {
+  //background-image: url("/home/xylo/Downloads/clouds-cloud-svgrepo-com");
+  margin: 0 0.5rem;
+}
+.weather-temp {
+  font-size: 2rem;
+}
+.temp-icon {
+  font-size: 3.1rem;
+}
+.col1 {
+  margin: 0 1.5rem 0 0;
+}
+
+
+.btns {
+  font-size: 1.75rem;
+  background-color: $bg-alt;
+  margin: 0 0 0 0;
+  //margin: 0.5rem 0px;
+  padding: 0.75rem;
+  border-radius: $border-radius;
+}
+.power-options {
+  font-size: 1.5rem;
+  min-width: 2.75rem;
+}
+.apps {
+  //font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.tools {
+  //font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.btns button {
+  border-radius: $border-radius;
+  padding: 0.4rem;
+}
+.apps box button {
+  background-color: $bg-alt-alt;
+}
+.tools box button {
+  background-color: $bg-alt-alt;
+}
+
+.wifi {
+  background-color: $sage;
+}
+.bluetooth {
+  background-color: $blue;
+}
+.dnd {
+  background-color: $salmon;
+}
+.poweroff {
+  background-color: $red;
+}
+.restart {
+  background-color: $pink;
+}
+.lock {
+  background-color: $yellow;
+}
+.logout {
+  background-color: $sage;
+}
+.sleep {
+  background-color: $blue2;
+}
+
+
+
+
+
+
+
+

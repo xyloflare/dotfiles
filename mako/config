@@ -1,0 +1,9 @@
+max-history=7
+default-timeout=4000
+ignore-timeout=0
+font=0xProtoNerdFont Normal 10
+background-color=#080808
+text-color=#b2b2b2
+border-color=#b2b2b2
+border-radius=5
+border-size=2

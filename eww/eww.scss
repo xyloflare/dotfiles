@@ -1,0 +1,41 @@
+$bg: #090809;
+$bg-alt: #0e0e10;
+$fg: #b3b2b3;
+$fg-alt: #817e81;
+$bg-alt-alt: #817e81;
+$red: #ff5555;
+$green: #8dc95f;
+$green2: #37c792;
+$yellow: #e2c78b;
+$blue: #80a1fe;
+$blue2: #75b2fe;
+$purple: #ce86e8;
+$purple2: #af81fe;
+$cyan: #78dac9;
+$pink: #e75e73;
+$sage: #c7c685;
+$salmon: #f09578;
+
+$profile-img: "/home/xylo/Pictures/My/me_animefied.png";
+
+$center-win-border: $fg;
+$right-win-border: $purple;
+$left-win-border: $sage;
+
+@import "dock/eww.scss";
+@import "sysmenu/eww.scss";
+@import "misc/eww.scss";
+
+* {
+  all: unset;
+}
+.propo-font {
+  font-family: "Iosevka NF";
+}
+.mono-font {
+  font-family: "Iosevka NFM"
+}
+.symbols-font {
+  font-family: "Symbols Nerd Font ";
+}
+

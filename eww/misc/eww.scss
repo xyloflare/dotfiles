@@ -1,0 +1,58 @@
+.right-widget {
+  background-color: $bg;
+  border: 1px solid $center-win-border;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+.center-widget {
+  background-color: $bg;
+  border: 1px solid $center-win-border;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+.clock {
+  font-weight: 400;
+  font-size: 3.5rem;
+  padding: 0.25rem;
+}
+.clock .date-in-clock {
+  font-size: large;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  //font-weight: 500;
+}
+
+.calendar-row {
+  background-color: $bg-alt;
+  border-radius: 10px;
+}
+.cal-box {
+    padding: 0.2em;
+    margin: 0.75em 0.5em 0.25em;
+}
+.month-year {
+    font-size: 24px;
+    color: $yellow;
+    font-weight: bold;
+    margin: 8px 0px 0px 0px;
+}
+.day-names {
+    margin: 0.75em 0.75em 0em;
+    font-size: 20px;
+    font-weight: bold;
+    color: $green;
+}
+.cal {
+    padding: 1em .75em 0em;
+}
+calendar {
+    font-weight: bold;
+    color: $fg;
+    &:selected {
+        color: $blue;
+    }
+    &:indeterminate {
+        color: $fg-alt;
+    }
+}

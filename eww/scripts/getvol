@@ -1,0 +1,17 @@
+#!/bin/bash
+
+get_vol() {
+    local out
+    out=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+    if [[ $out == *"[MUTED]"* ]]; then
+        echo 0
+    else
+        awk '{printf "%d\n", $2 * 100}' <<< "$out"
+    fi
+}
+
+get_vol
+
+pactl subscribe 2>/dev/null | grep --line-buffered "sink" | while read -r _; do
+    get_vol
+done

@@ -1,0 +1,69 @@
+(defvar reveal_center false)
+(defvar reveal_right true)
+
+;(defvar calendar_day 17)
+(defpoll calendar_day :initial 1 :interval "10h" :run-while reveal_center
+`date '+%d'`)
+
+(defpoll calendar_month :initial 1 :interval "24h" :run-while reveal_center
+`date '+%m'`)
+;(defvar calendar_month 3)
+(defvar calendar_year 2026)
+
+(defwidget center_widget []
+  (box :class "center-widget mono-font" 
+    :orientation "v"
+    :space-evenly false
+    (box :class "clock" :orientation "v" :space-evenly false
+      "${formattime(EWW_TIME, "%I:%M%P")}"
+      (box :class "date-in-clock"
+      "${formattime(EWW_TIME, "%A")}"
+      )
+    )
+    (calendar-widget)
+  )
+)
+
+
+(defwidget calendar-widget []
+  (box :class "calendar-row" :orientation "v"
+    (box :class "cal-box" :orientation "v" :space-evenly "false"
+      (label :class "month-year" :text "${formattime(EWW_TIME, "%B %Y")}")
+      (box :class "day-names" :orientation "h" :space-evenly "true"
+        (label :text "Su")
+        (label :text "Mo")
+        (label :text "Tu")
+        (label :text "We")
+        (label :text "Th")
+        (label :text "Fr")
+        (label :text "Sa"))
+      (calendar :class "cal" :show-details false :show-heading false :show-day-names false :day calendar_day :month calendar_month :year calendar_year))))
+
+
+(defwindow center_window
+           :monitor 0
+           :geometry (geometry :x "0.6%"
+                               :y "1%"
+                               :width "0"
+                               :height "0"
+                               :anchor "top center")
+           :stacking "fg"
+           :windowtype "dock"
+           :css "background: transparent;"
+           :class "mono-font"
+      (center_widget))
+  ;(revealer :transition "crossfade" :duration "200ms" :reveal reveal_center (center_widget)))
+
+; not in use 
+(defwindow right_window
+           :monitor 0
+           :geometry (geometry :x "0.6%"
+                               :y "1%"
+                               :width "0" 
+                               :height "0"
+                               :anchor "top right")
+           :stacking "fg"
+           :windowtype "dock"
+           :css "background: transparent;"
+           :class "n"
+  (revealer :transition "crossfade" :duration "200ms" :reveal reveal_right (right_widget)))

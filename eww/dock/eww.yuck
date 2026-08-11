@@ -17,8 +17,12 @@
              :orientation "h"
     (leftside)
     ;(button :onclick "eww open --toggle center_window-closer && eww open --toggle center_window && eww update reveal_center=${!reveal_center}"
-    (button :onclick "eww open --toggle center_window && eww update reveal_center=${!reveal_center}"
-    {formattime(EWW_TIME, "%a %d %b, %I:%M %p")})
+    (box :space-evenly false :spacing 8
+      (button :onclick "eww open --toggle center_window && eww update reveal_center=${!reveal_center}"
+        {formattime(EWW_TIME, "%a %d %b,")})
+      (button :onclick "eww open --toggle worldclocks"
+        {formattime(EWW_TIME, "%I:%M %p")})
+    )
     (rightside)))
 
 (defwidget leftside []

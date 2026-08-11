@@ -1,0 +1,48 @@
+(defwindow worldclocks 
+           :monitor 0
+           :geometry (geometry :x "0.6%"
+                               :y "1%"
+                               :width "99.1%"
+                               :height "0"
+                               :anchor "top center")
+           :stacking "fg"
+           :windowtype "dock"
+           :css "background: transparent;"
+           :class "mono-font"
+      (worldclocks))
+
+(defwidget worldclocks []
+  (box :class "mono-font worldclocks" 
+    :orientation "h"
+    :valign "center"
+    :halign "center"
+    :space-evenly false
+    (box :class "clock worldclock" :orientation "v" :space-evenly false :halign "center"
+      "${formattime(EWW_TIME - 16200, "%I:%M%P")}"
+      (box :class "date-in-clock" 
+        :space-evenly false
+        :spacing 10
+        "London -"
+        "${formattime(EWW_TIME - 16200, "%a %d")}"
+      )
+    )
+    (box :class "clock worldclock" :orientation "v" :space-evenly false :halign "center"
+      "${formattime(EWW_TIME - 12600, "%I:%M%P")}"
+      (box :class "date-in-clock" 
+        :space-evenly false
+        :spacing 10
+        "Frankfurt -"
+        "${formattime(EWW_TIME - 12600, "%a %d")}"
+      )
+    )
+    (box :class "clock worldclock" :orientation "v" :space-evenly false :halign "center"
+      "${formattime(EWW_TIME + 9000, "%I:%M%P")}"
+      (box :class "date-in-clock" 
+        :space-evenly false
+        :spacing 10
+        "Hong Kong -"
+        "${formattime(EWW_TIME + 9000, "%a %d")}"
+      )
+    )
+  )
+)

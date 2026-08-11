@@ -1,6 +1,7 @@
 (include "./dock/eww.yuck")
 (include "./sysmenu/eww.yuck")
 (include "./misc/eww.yuck")
+(include "./worldclocks/eww.yuck")
 
 (defwidget closer [window ?updatevar]
   (eventbox :onclick "${updatevar} eww close ${window} && eww close ${window}-closer"))
